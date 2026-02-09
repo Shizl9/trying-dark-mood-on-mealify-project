@@ -1,0 +1,343 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 90px 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {   
+  text-decoration: none;
+  color: #595959;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  padding-top: 200px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+.icon-dark{
+    position: fixed;
+    top: 30px;
+    right: 100px;
+    z-index: 9999;
+    color:#000;
+}
+.navbar{
+    color: #eee;
+}
+.navbar-brand {
+  font-size: 45px;
+  font-weight: bold;
+  color:var(--navbrand);
+  padding-left: 250px;
+}
+
+.navbar-brand::after {
+  content: ".";
+  color: red;
+}
+/* الوضع العادي */
+:root{
+    --bg-color:#fff;
+    --text-color:#333;
+    --navbrand:#373737;
+    --navbar-color:#eee;
+    --navlink-color:#9999a3;
+    --hilight:#ce1212;
+
+}
+
+.navbar .nav-link {
+  position: relative;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  justify-content: space-around;
+}
+
+.nav-link {
+  font-size: 23px;
+   color:var(--navlink-color);
+}
+
+.navbar-nav {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar .nav-link::after {
+
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -6px;
+  background-color: #ce1212;
+  transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #000;
+}
+
+.navbar .nav-link:hover::after {
+  width: 100%;
+}
+.form-group{
+    font-size: 22px;
+    margin-left: 20px;
+}
+.icon-dark {
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+}
+
+
+.chefs-section {
+  background-color:var(--bg-color);
+  padding: 60px 20px;
+  margin: 0 auto;
+  height:100vh;
+}
+
+.chefs-section h2 {
+  color:var(--navlink-color);
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.chefs-section h1 {
+  font-size: 36px;
+  font-family: "algeria sans";
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--text-color);
+}
+
+.highlight {
+  color:var(--hilight);
+}
+
+/* Row flex layout */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Chef card styling */
+.chef-card {
+  padding: 0;
+  max-width: 350px;
+  overflow: hidden;
+  background-color:var(--bg-color);
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.7s, box-shadow 0.7s;
+  text-align: center;
+  position: relative;
+}
+
+.chef-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Chef images */
+.chef-img {
+  width: 100%;
+
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.chef-img img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s ease;
+}
+
+.chef-card:hover .social {
+  transform: scale(1);
+  opacity: 1;
+}
+
+
+/* Chef name and title */
+.chef-card h3 {
+  font-size: 20px;
+  color: var(--text-color);
+  margin: 10px 0 5px 0;
+}
+
+.chef-card p {
+  font-size: 14px;
+  color:var(--text-color);
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+/* Optional responsive adjustments */
+@media (max-width: 992px) {
+  .row {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .chef-card {
+    max-width: 100%;
+  }
+}
+
+.social {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.411);
+  padding: 10px 10px;
+  border-radius: 6px;
+  justify-content: center;
+  transform: translateX(60px);
+  /* خارج الصورة يمين */
+  opacity: 0;
+  transition: transform 0.7s ease, opacity 0.7s ease;
+}
+
+.social i {
+  padding: 8px;
+  border-radius: 50%;
+  color:var(--text-color);
+  transition: 0.3s;
+}
+
+.social i:hover {
+  color: var(--text-color);
+}
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.col-md-4 {
+  flex: 0 0 49%;
+  /* تقريبًا نصف المساحة مع المسافة */
+  box-sizing: border-box;
+}
+
+.contact-text {
+  text-align: center;
+}
+
+.contact-text h3 {
+  color: var(--navlink-color);
+}
+
+.map {
+  width: 100%;
+  height: 350px;
+  display: block;
+  overflow: hidden;
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.contact-box {
+  display: inline-block;
+  background:var(--navbar-color);
+  padding: 20px;
+  gap: 6px;
+  height: 100%;
+  width: 100%;
+}
+
+.icon {
+  width: 55px;
+  height: 55px;
+  background-color: var(--hilight);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin-right: 25px;
+  color:var(--bg-color);
+  border-radius: 100%;
+}
+
+.contact-text h4 {
+  margin: 0 0 5px;
+  font-weight: 700;
+}
+
+.contact-text p {
+  margin: 0;
+  color: #555;
+}
+.contacts-details {
+  width: 100%;
+  margin:  100px auto;
+  background: var(--bg-color);
+  padding: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+.contacts-details input,
+.contacts-details textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid var(--bg-color);
+  outline: none;
+  font-size: 14px;
+}
+.contacts-details textarea {
+  height: 150px;
+  resize: none;
+}
+.contacts-details button {
+  background-color:var(--hilight);
+  display: block;
+  color: var(--bg-color);
+  border: none;
+  padding: 12px 30px;
+  margin: 0 auto;
+  border-radius: 25px;
+ 
+}
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-row input {
+  width: 50%;
+}

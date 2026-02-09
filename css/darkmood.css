@@ -1,0 +1,143 @@
+/* dark mode */
+:root {
+    --body-dark: #252525;
+    --text-dark: #ffffff;
+    --navbar-dark: #000000;
+    --navlinks-dark: #adadad;
+    --hilight-dark: #c17e1f;
+
+}
+
+
+.moon {
+    display: inline-block;
+
+}
+
+.sun {
+    display: none;
+
+}
+
+#toggle-btn:checked~.icon-dark .moon {
+    display: none;
+}
+
+#toggle-btn:checked~.icon-dark .sun {
+    display: inline-block;
+    color: var(--text-dark);
+}
+
+#toggle-btn:checked~.navbar {
+    background-color: var(--navbar-dark) !important;
+    color: var(--text-color);
+
+}
+
+#toggle-btn:checked~.nav-link {
+    color: var(--navlinks-dark) !important;
+}
+
+#toggle-btn:checked~.navbar .navbar-brand {
+    color: var(--text-dark) !important;
+}
+
+#toggle-btn:checked~.navbar .navbar-brand::after {
+    content: ".";
+    color: var(--hilight-dark) !important;
+}
+
+#toggle-btn:checked~.navbar .nav-link::after {
+    background-color: var(--hilight-dark) !important;
+    
+}
+
+#toggle-btn:checked~.navbar .nav-link:hover {
+    color: var(--text-dark);
+}
+
+
+#toggle-btn:checked~.chefs-section {
+    background-color: var(--body-dark);
+    color: var(--text-color);
+}
+
+#toggle-btn:checked~.chefs-section h2 {
+    color: var(--navlinks-dark);
+}
+
+#toggle-btn:checked~.chefs-section h1 {
+    color: var(--text-dark);
+}
+
+#toggle-btn:checked~ .chefs-section h1 .highlight {
+    color: var(--hilight-dark) !important;
+}
+
+#toggle-btn:checked~.chefs-section .chef-card {
+    background-color: var(--navbar-dark) !important;
+}
+
+#toggle-btn:checked~.chefs-section .chef-card h3 {
+    color: var(--text-dark) !important;
+}
+
+#toggle-btn:checked~.chefs-section .chef-card p {
+    color: var(--navlinks-dark) !important;
+}
+
+
+#toggle-btn:checked~.contact-section {
+
+    background-color: var(--body-dark);
+    color: var(--text-color) ;
+}
+
+#toggle-btn:checked~ .contact-text h3 {
+    color: var(--navlinks-dark);
+}
+#toggle-btn:checked~ .contact-section h1{
+    color: var(--text-dark);
+}
+#toggle-btn:checked~ .contact-section h1 .highlight {
+    color: var(--hilight-dark) !important;
+}
+
+#toggle-btn:checked~.contact-section .contact-box {
+    background-color: var(--navbar-dark) !important;
+    color: var(--text-dark) !important;
+}
+
+#toggle-btn:checked~.contact-section .contact-box .icon {
+    background-color: var(--hilight-dark) !important;
+    color: var(--text-dark) !important;
+}
+
+
+#toggle-btn:checked~.contact-section .contact-box .contact-text h4 {
+    color: var(--navlinks-dark) !important;
+}
+
+#toggle-btn:checked~.contact-section .contact-box .contact-text p {
+    color: var(--text-dark) !important;
+}
+
+#toggle-btn:checked~.contact-section .contacts-details {
+    background-color: var(--navbar-dark) ;
+}
+
+#toggle-btn:checked~.contacts-details input
+{
+    background-color: var(--text-color);
+    color: var(--navlinks-dark);
+}
+#toggle-btn:checked~.contacts-details textarea {
+ background-color: var(--text-color) ;
+    color: var(--navlinks-dark);
+
+}
+
+#toggle-btn:checked~.contact-section .contacts-details button {
+    background-color: var(--hilight-dark) ;
+
+}
